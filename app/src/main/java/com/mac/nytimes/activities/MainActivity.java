@@ -29,107 +29,111 @@ import com.mac.nytimes.network.NYTimesRestAPI;
 
 public class MainActivity extends AppCompatActivity implements RestAPIListener {
 
-    private RecyclerView recyclerView;
-    private NewsAdapter mAdapter;
-    private Toolbar mToolbar;
+	private CoordinatorLayout coordinatorLayout;
+	private NewsAdapter mAdapter;
+	private Toolbar mToolbar;
+	private RecyclerView recyclerView;
+	Snackbar snackbar;
+	private BroadcastReceiver mReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			sendEmptyMediaMsg();
+		}
+	};
 
-    Snackbar snackbar;
-    private CoordinatorLayout coordinatorLayout;
+	private void fetchData() {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+		findViewById(R.id.progress).setVisibility(View.VISIBLE);
+		new NYTimesRestAPI(this).getTopStories();
+	}
 
-        coordinatorLayout = (CoordinatorLayout) findViewById(R.id
-                .coordinatorLayout);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
 
-        mAdapter = new NewsAdapter(this, new ArrayList<Result>());
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setAdapter(mAdapter);
+		coordinatorLayout = (CoordinatorLayout) findViewById(R.id
+				.coordinatorLayout);
+		mToolbar = (Toolbar) findViewById(R.id.toolbar);
+		recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-        setToolbar();
-        fetchData();
+		mAdapter = new NewsAdapter(this, new ArrayList<Result>());
+		LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
+		recyclerView.setLayoutManager(mLayoutManager);
+		recyclerView.setAdapter(mAdapter);
 
-        LocalBroadcastManager.getInstance(this).registerReceiver(mReceiver,
-                new IntentFilter(AppConstants.BROADCAST));
-    }
+		setToolbar();
+		fetchData();
 
-    private void setToolbar() {
+		LocalBroadcastManager.getInstance(this).registerReceiver(mReceiver,
+				new IntentFilter(AppConstants.BROADCAST));
+	}
 
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "fonts/font.ttf");
-        TextView myTextView = (TextView) findViewById(R.id.app_title);
-        myTextView.setTypeface(myTypeface);
-    }
+	public void onCustomDatePickerButtonClicked(View view) {
 
-    private BroadcastReceiver mReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            sendEmptyMediaMsg();
-        }
-    };
+		Intent intent = new Intent(this, CustomDatePickerActivity.class);
+		startActivity(intent);
+	}
 
-    private void sendEmptyMediaMsg() {
-        if (snackbar != null) {
-            snackbar.dismiss();
-            snackbar = null;
-        }
-        snackbar = Snackbar
-                .make(coordinatorLayout, "No media found.", Snackbar.LENGTH_SHORT);
+	@Override
+	public void onFailure(String localizedMessage) {
+		findViewById(R.id.progress).setVisibility(View.GONE);
+		showMessage("Oops! something went wrong. \nPlease check your internet connection and retry.");
+	}
 
-        View sbView = snackbar.getView();
-        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-        textView.setTextColor(Color.YELLOW);
-        snackbar.show();
-    }
+	@Override
+	public void onSuccess(Object responseObj) {
+		TopStoriesResponse data = (TopStoriesResponse) responseObj;
+		mAdapter.addAll(data.getResults());
+		mAdapter.notifyDataSetChanged();
+		findViewById(R.id.progress).setVisibility(View.GONE);
+		if (snackbar != null) {
+			snackbar.dismiss();
+			snackbar = null;
+		}
+	}
 
-    private void fetchData() {
+	private void sendEmptyMediaMsg() {
+		if (snackbar != null) {
+			snackbar.dismiss();
+			snackbar = null;
+		}
+		snackbar = Snackbar
+				.make(coordinatorLayout, "No media found.", Snackbar.LENGTH_SHORT);
 
-        findViewById(R.id.progress).setVisibility(View.VISIBLE);
-        new NYTimesRestAPI(this).getTopStories();
-    }
+		View sbView = snackbar.getView();
+		TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+		textView.setTextColor(Color.YELLOW);
+		snackbar.show();
+	}
 
-    @Override
-    public void onSuccess(Object responseObj) {
-        TopStoriesResponse data = (TopStoriesResponse) responseObj;
-        mAdapter.addAll(data.getResults());
-        mAdapter.notifyDataSetChanged();
-        findViewById(R.id.progress).setVisibility(View.GONE);
-        if (snackbar != null) {
-            snackbar.dismiss();
-            snackbar = null;
-        }
-    }
+	private void setToolbar() {
 
-    @Override
-    public void onFailure(String localizedMessage) {
-        findViewById(R.id.progress).setVisibility(View.GONE);
-        showMessage("Oops! something went wrong. \nPlease check your internet connection and retry.");
-    }
+		setSupportActionBar(mToolbar);
+		getSupportActionBar().setDisplayShowTitleEnabled(false);
+		Typeface myTypeface = Typeface.createFromAsset(getAssets(), "fonts/font.ttf");
+		TextView myTextView = (TextView) findViewById(R.id.app_title);
+		myTextView.setTypeface(myTypeface);
+	}
 
-    private void showMessage(String message) {
-        if (snackbar != null) {
-            snackbar.dismiss();
-            snackbar = null;
-        }
-        snackbar = Snackbar
-                .make(coordinatorLayout, message, Snackbar.LENGTH_INDEFINITE)
-                .setAction("RETRY", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        fetchData();
-                    }
-                });
+	private void showMessage(String message) {
+		if (snackbar != null) {
+			snackbar.dismiss();
+			snackbar = null;
+		}
+		snackbar = Snackbar
+				.make(coordinatorLayout, message, Snackbar.LENGTH_INDEFINITE)
+				.setAction("RETRY", new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						fetchData();
+					}
+				});
 
-        View sbView = snackbar.getView();
-        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-        textView.setTextColor(Color.YELLOW);
-        snackbar.setActionTextColor(Color.RED);
-        snackbar.show();
-    }
+		View sbView = snackbar.getView();
+		TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+		textView.setTextColor(Color.YELLOW);
+		snackbar.setActionTextColor(Color.RED);
+		snackbar.show();
+	}
 }

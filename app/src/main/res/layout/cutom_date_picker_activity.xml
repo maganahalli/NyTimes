@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".activities.CustomDatePickerActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom Date Picker"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_title"/>
+    <fragment
+        android:id="@+id/serviceDetailsFragment"
+        android:name="com.mac.nytimes.customDatePicker.CustomDatePickerFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
