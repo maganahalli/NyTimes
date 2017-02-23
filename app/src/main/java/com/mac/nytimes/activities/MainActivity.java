@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements RestAPIListener {
 	}
 
 	public void onCustomDatePickerButtonClicked(View view) {
-
 		Intent intent = new Intent(this, CustomDatePickerActivity.class);
 		startActivity(intent);
 	}
@@ -79,6 +78,11 @@ public class MainActivity extends AppCompatActivity implements RestAPIListener {
 	public void onFailure(String localizedMessage) {
 		findViewById(R.id.progress).setVisibility(View.GONE);
 		showMessage("Oops! something went wrong. \nPlease check your internet connection and retry.");
+	}
+
+	public void onPrimesButtonClicked(View view) {
+		Intent intent = new Intent(this, LandingPageActivity.class);
+		startActivity(intent);
 	}
 
 	@Override

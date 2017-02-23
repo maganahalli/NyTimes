@@ -1,0 +1,136 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activities.PrimesActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.PrimesActivity">
+
+        <LinearLayout android:id="@+id/linerlayOut" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                      android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/primesActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onPrimesButtonClicked"
+                android:text="Primes"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+
+            <View style="@style/Divider"/>
+
+
+            <Button
+                android:id="@+id/gcdActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onGcdButtonClicked"
+                android:text="GCD"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <View style="@style/Divider"/>
+
+
+            <Button
+                android:id="@+id/geometryActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onGeometryButtonClicked"
+                android:text="Geometry"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <View style="@style/Divider"/>
+
+
+            <Button
+                android:id="@+id/basesActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onBasesButtonClicked"
+                android:text="Bases"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <View style="@style/Divider"/>
+
+            <Button
+                android:id="@+id/fractionsAndNumbersActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onFractionAndNumberButtonClicked"
+                android:text=" Fractions and Complex Numbers"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+            <View style="@style/Divider"/>
+
+            <Button
+                android:id="@+id/dataStructuresActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onDataStructuresButtonClicked"
+                android:text=" Data Structures"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <View style="@style/Divider"/>
+
+                        <Button
+                            android:id="@+id/queueActionButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:onClick="onQueueButtonClicked"
+                            android:text=" Queues Example"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+            <TextView android:id="@+id/queueTextLabel"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:text=""
+                                 android:textColor="@android:color/black"
+                                 android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+
+                                    <Button
+                                        android:id="@+id/btreeActionButton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp"
+                                        android:onClick="onBtreeButtonClicked"
+                                        android:text=" B Tree Example"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold"/>
+
+                        <TextView android:id="@+id/btreeTextLabel"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:text=""
+                                             android:textColor="@android:color/black"
+                                             android:textSize="@dimen/font_normal"/>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>

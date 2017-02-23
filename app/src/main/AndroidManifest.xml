@@ -21,6 +21,15 @@
             android:name=".activities.MultimediaActivity">
         </activity>
         <activity android:name=".activities.CustomDatePickerActivity"/>
+        <activity android:name=".activities.PrimesActivity"/>
+        <activity android:name=".activities.SievePrimesActivity"/>
+        <activity android:name=".activities.LandingPageActivity"/>
+        <activity android:name=".activities.GcdActivity"/>
+        <activity android:name=".activities.BasesActivity"/>
+        <activity android:name=".activities.FractionsActivity"/>
+        <activity android:name=".activities.GeometryActivity"/>
+        <activity android:name=".activities.DataStructuresActivity"/>
+        <activity android:name=".activities.HelpActivity"/>
     </application>
 
 </manifest>

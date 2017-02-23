@@ -1,0 +1,155 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activities.PrimesActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.PrimesActivity">
+
+        <LinearLayout android:id="@+id/linerlayOut" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                      android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Primes"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_title"/>
+
+            <TextView android:id="@+id/para1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/primes"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/code1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/code1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/optOneLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/opt1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/code2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/code1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/label2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Enter Number for PRIME NUMBER validation"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <EditText android:id="@+id/edit2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:singleLine="true"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <Button
+                android:id="@+id/checkPrimeNumber1ActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onPrimeNumberOptButtonClicked"
+                android:text="Check Prime Number?"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+            <TextView android:id="@+id/result"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/holo_red_dark"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/optTwoLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/opt2"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/stepLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/step1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <TextView android:id="@+id/step2Label"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/step2Label"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <TextView android:id="@+id/step2code"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/step2"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <TextView android:id="@+id/step3Label"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/step3Label"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <TextView android:id="@+id/step3"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/step3"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <TextView android:id="@+id/finalstep"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/finalStep"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+
+            <Button
+                android:id="@+id/generatePrimesActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onGeneratePrimeNumbersButtonClicked"
+                android:text="generate Primes"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>

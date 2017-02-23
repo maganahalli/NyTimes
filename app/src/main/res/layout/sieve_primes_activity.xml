@@ -1,0 +1,79 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activities.PrimesActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.SievePrimesActivity">
+
+        <LinearLayout android:id="@+id/linerlayOut" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                      android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Primes using Sieve of Eratosthenes"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_title"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/label3"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/opt3"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+
+
+            <TextView android:id="@+id/label2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Enter Number for 2 to n to generate primes"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <EditText android:id="@+id/edit2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:singleLine="true"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <Button
+                android:id="@+id/checkPrimeNumber1ActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onPrimeNumberGenerateButtonClicked"
+                android:text="Generate Prime Numbers"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/result"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>

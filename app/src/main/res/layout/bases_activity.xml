@@ -1,0 +1,125 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activities.PrimesActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.PrimesActivity">
+
+        <LinearLayout android:id="@+id/linerlayOut" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                      android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bases"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_title"/>
+
+            <TextView android:id="@+id/para1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/bases"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/code1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/optOneLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Java users will be happy to know that the above can be also written as:"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+
+            <TextView android:id="@+id/label1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="return Integer.parseInt(+n,b);"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/stepLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/bases1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/code2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/step4"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/bases2"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/code3"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/label4"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/bases3"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/code4"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/label5"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="In Java there are some useful shortcuts when converting from decimal to other common representations, such as binary (base 2), octal (base 8) and hexadecimal (base"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/code5"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>

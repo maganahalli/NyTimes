@@ -1,0 +1,141 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activities.PrimesActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.PrimesActivity">
+
+        <LinearLayout android:id="@+id/linerlayOut" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                      android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Geometry"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_title"/>
+
+            <TextView android:id="@+id/para1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/geometry"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/codeLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/geometry1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/optOneLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/geometry2"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+
+            <TextView android:id="@+id/label1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="B = number of lattice points on the boundary of the polygon"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+
+            <TextView android:id="@+id/stepLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="I = number of lattice points in the interior of the polygon"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/step2Label"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Amazingly, the area of this polygon is then given by:"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/step3Label"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Area = B/2 + I - 1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/step4Label"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/geometry3"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/step3"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/geometry4"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/code1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/step4"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/geometry5"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/label4"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/geometry6"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/code3"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/label5"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/geometry7"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>

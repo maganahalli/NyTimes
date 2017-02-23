@@ -1,5 +1,7 @@
 package com.mac.nytimes.adapters;
 
+import java.util.List;
+
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,8 +11,6 @@ import android.view.ViewGroup;
 import com.mac.nytimes.R;
 import com.mac.nytimes.models.Result;
 import com.mac.nytimes.viewholders.NewsViewHolder;
-
-import java.util.List;
 
 
 public class NewsAdapter extends RecyclerView.Adapter {

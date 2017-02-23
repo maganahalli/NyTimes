@@ -1,0 +1,143 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activities.PrimesActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.PrimesActivity">
+
+        <LinearLayout android:id="@+id/linerlayOut" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                      android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GCD"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_title"/>
+
+            <TextView android:id="@+id/para1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/gcd"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/code1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/code1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/optOneLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/gcdopt1"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+
+            <TextView android:id="@+id/label1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="2336 = 1314 x 1 + 1022"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/stepLabel"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="We now do the same with 1314 and 1022:"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/step2Label"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="1314 = 1022 x 1 + 292"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/step2code"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="We continue this process until we reach a remainder of 0:"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/step3Label"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="1022 = 292 x 3 + 146"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <TextView android:id="@+id/step4Label"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="292 = 146 x 2 + 0"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/step3"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="The last non-zero remainder is the GCD. So the GCD of 2336 and 1314 is 146. This algorithm can be easily coded as a recursive function:"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/code2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/step4"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/lcd"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/code3"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_normal"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/label4"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:text="As a final note, Euclid’s algorithm can be used to solve linear Diophantine equations. These equations have integer coefficients and are of the form:"
+                                 android:textColor="@android:color/black"
+                                 android:textSize="@dimen/font_normal"/>
+            <TextView android:id="@+id/label5"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:text="ax + by = c"
+                                 android:textColor="@android:color/black"
+                                 android:textSize="@dimen/font_normal"/>
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>

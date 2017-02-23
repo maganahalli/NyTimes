@@ -65,4 +65,15 @@
         android:textColor="@android:color/black"
         android:textStyle="bold"/>
 
+    <Button
+           android:id="@+id/primeNumberActionButton"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/customDatePickerActionButton"
+           android:layout_marginTop="16dp"
+           android:onClick="onPrimesButtonClicked"
+           android:text="Data Structures and Algorithems"
+           android:textColor="@android:color/black"
+           android:textStyle="bold"/>
+
 </RelativeLayout>

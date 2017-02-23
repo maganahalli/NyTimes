@@ -1,0 +1,104 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activities.PrimesActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.PrimesActivity">
+
+        <LinearLayout android:id="@+id/linerlayOut" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                      android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:orientation="vertical">
+
+
+            <TextView android:id="@+id/simpleDataStructure"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/dataStructure"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/arrays"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/arrays"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/linkedLists"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/linkedList"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+            <View style="@style/Divider"/>
+
+
+            <TextView android:id="@+id/queues"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/queues"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+            <View style="@style/Divider"/>
+
+            <TextView android:id="@+id/stacks"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/stacks"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/trees"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/trees"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/btree"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/treeb"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/pqueues"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/priorityQueues"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+            <View style="@style/Divider"/>
+            <TextView android:id="@+id/hashtables"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:onClick="onClickHelp"
+                      android:text="@string/hashTables"
+                      android:textColor="@android:color/black"
+                      android:textSize="@dimen/font_title"/>
+            <View style="@style/Divider"/>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>
