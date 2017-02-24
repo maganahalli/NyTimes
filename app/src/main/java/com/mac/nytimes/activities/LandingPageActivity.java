@@ -59,14 +59,22 @@ public class LandingPageActivity extends AppCompatActivity {
 		st.bfsTraverseWithSprialPattern();
 
 		AceStringManager manager = new AceStringManager();
-		String pString = "abcdedcba";
+		String pString = "abcd12$%^&**e21dcba";
 		builder.append("palindrome text input : ").append(pString).append("\n");
-		if (manager.isPalinDrome(pString)) {
-			builder.append("is Palindrome").append("\n");
+		if (manager.isPalinDromeInPlace(pString)) {
+			builder.append("Text is Palindrome").append("\n");
 		} else {
-			builder.append("is NOT Palindrome").append("\n");
+			builder.append("Text is NOT Palindrome").append("\n");
 		}
 
+		int pNumber = 6454;
+		builder.append("palindrome number input : ").append(pNumber).append("\n");
+
+		if (manager.isPalinDromeInPlaceNumber(pNumber)) {
+			builder.append("Number is Palindrome").append("\n");
+		} else {
+			builder.append("Number is NOT Palindrome").append("\n");
+		}
 		btreeTextLabelView.setText(builder.toString());
 	}
 
