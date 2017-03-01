@@ -68,4 +68,39 @@ public class AceStringManager {
 		}
 		return reminder == number / 10 && runningNumber == number % 10;
 	}
+
+	public int[] moveZeroToEnd(int[] arrayOfNumbers) {
+		int swapCount = 0;
+		int lastIndex = arrayOfNumbers.length - 1;
+
+		for (int i = lastIndex; i >= 0; i--) {  // skip the very last element
+			if (arrayOfNumbers[i] == 0) {
+				arrayOfNumbers[i] = arrayOfNumbers[lastIndex - swapCount];
+				arrayOfNumbers[lastIndex - swapCount] = 0;
+				swapCount++;
+			}
+		}
+		return arrayOfNumbers;
+	}
+
+	public int[] moveZeroToFront(int[] arrayOfNumbers) {
+		int source = arrayOfNumbers.length - 1;
+		int dest = arrayOfNumbers.length - 1;
+		while (source >= 0) {
+		  if (arrayOfNumbers[source] != 0) {
+				arrayOfNumbers[dest--] = arrayOfNumbers[source];
+		  }
+		  source--;
+		}
+		while (dest >= 0){
+			arrayOfNumbers[dest--] = 0;
+		}
+		return arrayOfNumbers;
+	}
+
+	public void swapValues(int[] array, int count, int swapIndex) {
+		int temp = array[count];
+		array[count] = array[swapIndex];
+		array[swapIndex] = temp;
+	}
 }

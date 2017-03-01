@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.mac.nytimes.R;
 import com.mac.nytimes.pojo.AceBST;
 import com.mac.nytimes.pojo.AceStringManager;
+import com.mac.nytimes.pojo.AceTRIE;
 import com.mac.nytimes.pojo.MyQueue;
 
 public class LandingPageActivity extends AppCompatActivity {
@@ -43,6 +44,41 @@ public class LandingPageActivity extends AppCompatActivity {
 
 	}
 
+	private void buildDisplayStr(StringBuilder builder, AceTRIE dict, String input) {
+		builder.append(input + ":   ").append(" ");
+		builder.append(dict.search(input) ? "found" : "notFound").append("\n");
+	}
+
+	protected String getTrieTestResults() {
+		StringBuilder builder = new StringBuilder();
+		AceTRIE dict = new AceTRIE();
+		dict.insert("are");
+		dict.insert("area");
+		dict.insert("base");
+		dict.insert("cat*");
+		dict.insert("cater");
+		dict.insert("basement");
+
+		String input = "caterer";
+		buildDisplayStr(builder, dict, input);
+
+		input = "basement";
+		buildDisplayStr(builder, dict, input);
+
+		input = "are";
+		buildDisplayStr(builder, dict, input);
+
+		input = "arex";
+		buildDisplayStr(builder, dict, input);
+
+		input = "basement";
+		buildDisplayStr(builder, dict, input);
+
+		input = "xyz";
+		buildDisplayStr(builder, dict, input);
+		return builder.toString();
+	}
+
 	public void onBasesButtonClicked(View view) {
 		Intent intent = new Intent(this, BasesActivity.class);
 		startActivity(intent);
@@ -75,6 +111,21 @@ public class LandingPageActivity extends AppCompatActivity {
 		} else {
 			builder.append("Number is NOT Palindrome").append("\n");
 		}
+
+		int[] numberArray = new int[]{0, 1, 0};
+		numberArray = manager.moveZeroToEnd(numberArray);
+		for (int count = 0; count < numberArray.length; count++) {
+			builder.append(" " + numberArray[count]);
+		}
+		builder.append("\n");
+		numberArray = manager.moveZeroToFront(numberArray);
+		for (int count = 0; count < numberArray.length; count++) {
+			builder.append(" " + numberArray[count]);
+		}
+
+		builder.append("\n");
+		builder.append(getTrieTestResults());
+
 		btreeTextLabelView.setText(builder.toString());
 	}
 
